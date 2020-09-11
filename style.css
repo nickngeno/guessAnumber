@@ -1,0 +1,137 @@
+html{
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #000;
+}
+body{
+    margin: 0 auto;
+    padding: 0;
+    width: 90vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    text-align: center;
+   
+}
+.header_info{
+    font-size: 2rem;
+    margin: 2rem 0;
+    /* background: #000; */
+
+}
+p{
+    font-size: 1.6rem;
+}
+h2{
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+.difficulty_level{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    /* background: #000; */
+
+}
+.difficulty_level button{
+    width: 100%;
+    padding: 1.6rem;
+    border: none;
+    cursor: pointer;
+    /* font-family: 'Raleway', sans-serif; */
+}
+.difficulty_level :nth-child(2){
+
+    border-radius: 1rem 1rem 0 0;
+    background: #0c3483;
+    color: white;;
+}
+.difficulty_level :last-child{
+
+    border-radius: 0 0 1rem 1rem;
+    background: #8249eb;
+    color: white;;
+}
+#start_newBtn{
+    background: green;
+    color:white;
+    padding: 0.8rem;
+    margin: 1rem;
+    margin: 2rem  auto;
+}
+input{
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+    margin: 1rem;
+    width: 20%;
+}
+.range{
+    margin: 2rem;
+    color: white;
+    font-size: 1.4rem;
+}
+.range_bar{    
+    background: #8249eb;
+    width: 50vw;
+    height: 4rem;
+    margin: 0.5rem auto;
+    display: flex;
+    
+}
+.range_anim{
+    animation: rangeAnimation 1s infinite;
+}
+.gameEnded{
+    color: red;
+    animation: gameended 2s infinite ease-out;
+}
+
+
+.no_attempt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    background: lightgray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+a{
+    font-size: 1.6rem;
+}
+
+@keyframes gameended{
+    0%{
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    50%{
+        opacity: 0.7;
+       
+    }
+    100%{
+        opacity: 1;
+       
+    }
+}
+@keyframes rangeAnimation{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (min-width: 800px){
+    body{
+        max-width: 60vw;
+    }
+
+}

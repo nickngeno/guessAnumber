@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess A Number</title>
+    <link rel="stylesheet" href="./style.css">
+   
+</head>
+<body onload="guessNumber()">
+    <main>
+        <section id="splash_page">
+        <div class="header_info">
+            <h2>Guess a Number game</h2>
+            <p>(Within the range <span>1- 100</span>)</p>
+        </div>
+        
+      
+            <div class="difficulty_level">
+                <p>Select difficulty level</p>
+                <button onclick="easyMode()">Easy mode: 10 attempts</button><br>
+                <button onclick="hardMode()">Hard mode: 5 attempts</button>
+            </div>
+        </section>
+        <section id="start_newgame">
+            <button id="start_newBtn" onclick="reload()">Start New</button>
+            <h2 id="guess">Guess a Number</h2>
+            <p id="display_message"></p>
+            <div>
+                <input type="number" id="inputValue" placeholder="input your number" min="1" max="100" onchange="compareNumbers()"><br>
+                <!-- <button id= "check_btn" onclick="compareNumbers()">Check</button> -->
+            </div>
+            
+            <div class="range">
+                <span id="range_output">(1 - 100)</span>
+                <div class="range_bar">
+                    <span id="low"></span>
+                    <span id="space"></span>
+                    <span id="high"></span>
+                </div>
+            </div>
+            <div>
+                <div class="no_attempt">
+                    <span>Number of attempts</span>
+                    <span id="no_attempts"> 0 </span>
+                </div>
+                <div class="no_attempt">
+                    <span>Previous attempts</span>
+                    <span id="previous_attempts">-</span>
+                </div>
+            </div>
+           <a href="" onclick="reload()">Back</a>
+        </section>
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>
